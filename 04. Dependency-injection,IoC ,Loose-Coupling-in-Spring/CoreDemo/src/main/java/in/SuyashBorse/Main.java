@@ -8,7 +8,11 @@ import in.SuyashBorse.Notification.NotificationService;
 public class Main {
     static void main() {
         NotificationService notification = new EmailService();
-      OrderService order = new OrderService(notification);
-      order.placeOrder();
+      //OrderService order = new OrderService(notification);
+        OrderService order = new OrderService();
+        order.setNotification(notification);
+        order.placeOrder();
     }
+
+
 }

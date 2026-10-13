@@ -10,13 +10,21 @@ public class OrderService {
     //NotificationService notification = new EmailService();  // loosely coupled  as compared to direct object creation still not the best case.
 
     NotificationService notification;
+
     public OrderService(NotificationService notification){
         this.notification = notification;
+    }
+
+    public  OrderService(){
+
     }
 
     public void placeOrder(){
         System.out.println("Order Placed");
         notification.sendNotification();
+    }
 
+    public void setNotification(NotificationService notification) {
+        this.notification = notification;
     }
 }
