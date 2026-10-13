@@ -4,6 +4,7 @@ package in.SuyashBorse;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-      System.out.println("Hello");
+      OrderService order = new OrderService();
+      order.placeOrder();
     }
 }
