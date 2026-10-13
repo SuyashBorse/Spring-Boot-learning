@@ -1,8 +1,13 @@
 package in.SuyashBorse;
 
+import in.SuyashBorse.Notification.EmailService;
+import in.SuyashBorse.Notification.NotificationService;
+import in.SuyashBorse.Notification.SmsService;
+
 public class OrderService {
 
-    EmailService notification = new EmailService(); //Due to this it is tightly coupled.
+    //EmailService notification = new EmailService(); //Due to this it is tightly coupled.
+    NotificationService notification = new EmailService();  // loosely coupled  as compared to direct object creation still not the best case.
 
     public void placeOrder(){
         System.out.println("Order Placed");
